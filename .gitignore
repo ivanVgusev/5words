@@ -1,0 +1,9 @@
+.env
+.DS_Store
+.idea/
+__pycache__/
+logs/
+
+corpus_maker.py
+progress_monitor.py
+writers_and_readers.py
