@@ -1,0 +1,12 @@
+schedule~=1.2.2
+telebot~=0.0.5
+requests~=2.32.5
+emoji~=2.14.1
+gigachat~=0.1.42.post2
+dotenv~=0.9.9
+python-dotenv~=1.1.1
+spacy~=3.8.7
+cefrpy~=1.0.1
+EbookLib~=0.19
+lxml~=6.0.1
+beautifulsoup4~=4.13.5
