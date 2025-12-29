@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 import json
 import datetime
 
-# ================== INIT ==================
+# INIT
 
 load_dotenv()
 
