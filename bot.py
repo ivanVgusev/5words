@@ -100,7 +100,6 @@ def translate(word, definition, pos):
 
 
 def example_sentence(word, definition, pos):
-    print("example_sentence")
     prompt = (
         "Generate ONE example sentence (max 13 words).\n"
         f"Word: {word}\nDefinition: {definition}\nPOS: {pos}\n"
@@ -114,19 +113,18 @@ def example_sentence(word, definition, pos):
 # ================== WORD PICKER ==================
 
 def pick_words(amount=5):
-    print("pick words")
     dictionary = reader(DICTIONARY_FILE)
     picked = []
 
     while len(picked) < amount:
         word_raw = random.choice(dictionary)
-        print(word_raw)
+
         mw_data = connect_mw(word_raw)
         if not mw_data:
             continue
 
         base = parse_mw(mw_data)
-        print(base)
+
         if not base:
             continue
 
@@ -138,7 +136,6 @@ def pick_words(amount=5):
             continue
 
         picked.append(base + [example, translation, emoji_symbol])
-        print(picked)
 
     return picked
 
@@ -146,7 +143,6 @@ def pick_words(amount=5):
 # ================== SENDER ==================
 
 def send_daily_words():
-    print("send_daily_words")
     try:
         words = pick_words()
         bot.send_message(CHAT_ID, 'Пять слов на сегодня!\n')
